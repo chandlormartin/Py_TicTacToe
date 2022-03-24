@@ -50,6 +50,53 @@ class Tictactoe:
             print("    X   |  X   |  X  ")
             print("   / \  | / \  | / \ ")
 
+
+    #--------------------------------------------------
+
+        if(a == 0 and b == 0 and c ==1):
+            print("        |      |  __  ")
+            print("        |      | |  | ")
+            print("        |      | |  | ")
+            print("        |      | |__| ")
+
+        if(a == 0 and b == 1 and c ==0): 
+            print("        |  __  |      ")
+            print("        | |  | |      ")
+            print("        | |  | |      ")
+            print("        | |__| |      ")
+
+        if(a == 0 and b == 1 and c ==0): 
+            print("        |  __  |  __  ")
+            print("        | |  | | |  | ")
+            print("        | |  | | |  | ")
+            print("        | |__| | |__| ")
+
+        if(a == 1 and b == 0 and c ==0): 
+            print("    __  |      |      ")
+            print("   |  | |      |      ")
+            print("   |  | |      |      ")
+            print("   |__| |      |      ")
+
+        if(a == 1 and b == 0 and c ==0): 
+            print("    __  |      |  __  ")
+            print("   |  | |      | |  | ")
+            print("   |  | |      | |  | ")
+            print("   |__| |      | |__| ")
+
+        if(a == 1 and b == 0 and c ==0): 
+            print("    __  |  __  |      ")
+            print("   |  | | |  | |      ")
+            print("   |  | | |  | |      ")
+            print("   |__| | |__| |      ")
+
+        if(a == 1 and b == 0 and c ==0): 
+            print("    __  |  __  |  __  ")
+            print("   |  | | |  | | |  | ")
+            print("   |  | | |  | | |  | ")
+            print("   |__| | |__| | |__| ")
+
+        #------------------------------------------
+
         if(a == 1 and b == 0 and c ==1): 
             print("        |      |     ")
             print("   \ /  |      | \ / ")
@@ -59,6 +106,12 @@ class Tictactoe:
         if(a == 0 and b == 0 and c ==0):
             print("        |  __  |     ")
             print("   \ /  | |  | |     ")
+            print("    X   | |  | |     ")
+            print("   / \  | |__| |     ")
+
+                    if(a == 0 and b == 0 and c ==0):
+            print("        |  __  |     ")
+            print("   0 | X|  | |     ")
             print("    X   | |  | |     ")
             print("   / \  | |__| |     ")
     
