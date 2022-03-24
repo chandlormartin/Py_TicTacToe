@@ -1,6 +1,6 @@
 class Tictactoe:
-    board = [0] * 9       #create empty board containing 9 spaces
-    
+    board       = [0] * 9       #create empty board containing 9 spaces
+    condition   = 0    
     def display_row(self, a, b, c):
         if(a == 0 and b == 0 and c == 0):
             print("        |      |     ")
@@ -164,14 +164,47 @@ class Tictactoe:
             print("   |  | | |  | |  X   ")
             print("   |__| | |__| | / \  ")
 
-    
-    def display(self):
+    def display(self):                                                  #displays the current board
         self.display_row(self.board[0], self.board[1], self.board[2])
         print("_______|______|_______")
         self.display_row(self.board[3], self.board[4], self.board[5])
-        print("______________________")
+        print("_______|______|_______")
         self.display_row(self.board[6], self.board[7], self.board[8])
 
-game = Tictactoe()
+    def check_end_condition(self):                                                #set condition to 1 if player won, 2 if player lost, 3 if a tie, or else does nothing
+        if(self.board[0] == 1 and self.board[1] == 1 and self.board[2] == 1):
+            self.condition = 1
+        if(self.board[3] == 1 and self.board[4] == 1 and self.board[5] == 1):
+            self.condition = 1
+        if(self.board[6] == 1 and self.board[7] == 1 and self.board[8] == 1):
+            self.condition = 1
+        if(self.board[0] == 1 and self.board[3] == 1 and self.board[6] == 1):
+            self.condition = 1
+        if(self.board[1] == 1 and self.board[4] == 1 and self.board[7] == 1):
+            self.condition = 1
+        if(self.board[2] == 1 and self.board[5] == 1 and self.board[8] == 1):
+            self.condition = 1
+        if(self.board[0] == 1 and self.board[4] == 1 and self.board[8] == 1):
+            self.condition = 1
+        if(self.board[2] == 1 and self.board[4] == 1 and self.board[6] == 1):
+            self.condition = 1
 
-game.display()
+        if(self.board[0] == 2 and self.board[1] == 2 and self.board[2] == 2):
+            self.condition = 2
+        if(self.board[3] == 2 and self.board[4] == 2 and self.board[5] == 2):
+            self.condition = 2
+        if(self.board[6] == 2 and self.board[7] == 2 and self.board[8] == 2):
+            self.condition = 2
+        if(self.board[0] == 2 and self.board[3] == 2 and self.board[6] == 2):
+            self.condition = 2
+        if(self.board[1] == 2 and self.board[4] == 2 and self.board[7] == 2):
+            self.condition = 2
+        if(self.board[2] == 2 and self.board[5] == 2 and self.board[8] == 2):
+            self.condition = 2
+        if(self.board[0] == 2 and self.board[4] == 2 and self.board[8] == 2):
+            self.condition = 2
+        if(self.board[2] == 2 and self.board[4] == 2 and self.board[6] == 2):
+            self.condition = 2
+
+        if 0 not in self.board:
+            self.condition = 3
