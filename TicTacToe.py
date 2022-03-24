@@ -2,118 +2,168 @@ class Tictactoe:
     board = [0] * 9       #create empty board containing 9 spaces
     
     def display_row(self, a, b, c):
-        if(a == 0 and b == 0 and c ==0):
+        if(a == 0 and b == 0 and c == 0):
             print("        |      |     ")
             print("        |      |     ")
             print("        |      |     ")
             print("        |      |     ")
 
-        if(a == 0 and b == 0 and c ==1):
+        if(a == 0 and b == 0 and c == 1):
             print("        |      |     ")
             print("        |      | \ / ")
             print("        |      |  X  ")
             print("        |      | / \ ")
 
-        if(a == 0 and b == 1 and c ==0): 
+        if(a == 0 and b == 1 and c == 0): 
             print("        |      |     ")
             print("        | \ /  |     ")
             print("        |  X   |     ")
             print("        | / \  |     ")
 
-        if(a == 0 and b == 1 and c ==1): 
+        if(a == 0 and b == 1 and c == 1): 
             print("        |      |     ")
             print("        | \ /  | \ / ")
             print("        |  X   |  X  ")
             print("        | / \  | / \ ")
 
-        if(a == 1 and b == 0 and c ==0): 
+        if(a == 1 and b == 0 and c == 0): 
             print("        |      |     ")
             print("   \ /  |      |     ")
             print("    X   |      |     ")
             print("   / \  |      |     ")
 
-        if(a == 1 and b == 0 and c ==1): 
+        if(a == 1 and b == 0 and c == 1): 
             print("        |      |     ")
             print("   \ /  |      | \ / ")
             print("    X   |      |  X  ")
             print("   / \  |      | / \ ")
 
-        if(a == 1 and b == 1 and c ==1): 
+        if(a == 1 and b == 1 and c == 1): 
             print("        |      |     ")
             print("   \ /  | \ /  |     ")
             print("    X   |  X   |     ")
             print("   / \  | / \  |     ")
 
-        if(a == 1 and b == 1 and c ==1): 
+        if(a == 1 and b == 1 and c == 1): 
             print("        |      |     ")
             print("   \ /  | \ /  | \ / ")
             print("    X   |  X   |  X  ")
             print("   / \  | / \  | / \ ")
 
-
-    #--------------------------------------------------
-
-        if(a == 0 and b == 0 and c ==1):
+        if(a == 0 and b == 0 and c == 2):
             print("        |      |  __  ")
             print("        |      | |  | ")
             print("        |      | |  | ")
             print("        |      | |__| ")
 
-        if(a == 0 and b == 1 and c ==0): 
+        if(a == 0 and b == 2 and c == 0): 
             print("        |  __  |      ")
             print("        | |  | |      ")
             print("        | |  | |      ")
             print("        | |__| |      ")
 
-        if(a == 0 and b == 1 and c ==0): 
+        if(a == 0 and b == 2 and c == 2): 
             print("        |  __  |  __  ")
             print("        | |  | | |  | ")
             print("        | |  | | |  | ")
             print("        | |__| | |__| ")
 
-        if(a == 1 and b == 0 and c ==0): 
+        if(a == 2 and b == 0 and c == 0): 
             print("    __  |      |      ")
             print("   |  | |      |      ")
             print("   |  | |      |      ")
             print("   |__| |      |      ")
 
-        if(a == 1 and b == 0 and c ==0): 
+        if(a == 2 and b == 0 and c == 2): 
             print("    __  |      |  __  ")
             print("   |  | |      | |  | ")
             print("   |  | |      | |  | ")
             print("   |__| |      | |__| ")
 
-        if(a == 1 and b == 0 and c ==0): 
+        if(a == 2 and b == 2 and c == 0): 
             print("    __  |  __  |      ")
             print("   |  | | |  | |      ")
             print("   |  | | |  | |      ")
             print("   |__| | |__| |      ")
 
-        if(a == 1 and b == 0 and c ==0): 
+        if(a == 2 and b == 2 and c == 2): 
             print("    __  |  __  |  __  ")
             print("   |  | | |  | | |  | ")
             print("   |  | | |  | | |  | ")
             print("   |__| | |__| | |__| ")
 
-        #------------------------------------------
+        if(a == 1 and b == 0 and c == 2):
+            print("        |      |  __  ")
+            print("   \ /  |      | |  | ")
+            print("    X   |      | |  | ")
+            print("   / \  |      | |__| ")
 
-        if(a == 1 and b == 0 and c ==1): 
-            print("        |      |     ")
-            print("   \ /  |      | \ / ")
-            print("    X   |      |  X  ")
-            print("   / \  |      | / \ ")
+        if(a == 0 and b == 1 and c == 2):
+            print("        |      |  __  ")
+            print("        | \ /  | |  | ")
+            print("        |  X   | |  | ")
+            print("        | / \  | |__| ")
 
-        if(a == 0 and b == 0 and c ==0):
-            print("        |  __  |     ")
-            print("   \ /  | |  | |     ")
-            print("    X   | |  | |     ")
-            print("   / \  | |__| |     ")
+        if(a == 1 and b == 1 and c == 2):
+            print("        |      |  __  ")
+            print("   \ /  | \ /  | |  | ")
+            print("    X   |  X   | |  | ")
+            print("   / \  | / \  | |__| ")
 
-                    if(a == 0 and b == 0 and c ==0):
-            print("        |  __  |     ")
-            print("   0 | X|  | |     ")
-            print("    X   | |  | |     ")
-            print("   / \  | |__| |     ")
+        if(a == 1 and b == 2 and c == 0): 
+            print("        |  __  |      ")
+            print("   \ /  | |  | |      ")
+            print("    X   | |  | |      ")
+            print("   / \  | |__| |      ")
+
+        if(a == 0 and b == 2 and c == 1): 
+            print("        |  __  |      ")
+            print("        | |  | | \ /  ")
+            print("        | |  | |  X   ")
+            print("        | |__| | / \  ")
+        
+        if(a == 1 and b == 2 and c == 1): 
+            print("        |  __  |      ")
+            print("   \ /  | |  | | \ /  ")
+            print("    X   | |  | |  X   ")
+            print("   / \  | |__| | / \  ")
+
+        if(a == 1 and b == 2 and c == 2): 
+            print("        |  __  |  __  ")
+            print("   \ /  | |  | | |  | ")
+            print("    X   | |  | | |  | ")
+            print("   / \  | |__| | |__| ")
+
+        if(a == 2 and b == 1 and c == 0): 
+            print("    __  |      |      ")
+            print("   |  | | \ /  |      ")
+            print("   |  | |  X   |      ")
+            print("   |__| | / \  |      ")
+
+        if(a == 2 and b == 0 and c == 1): 
+            print("    __  |      |      ")
+            print("   |  | |      | \ /  ")
+            print("   |  | |      |  X   ")
+            print("   |__| |      | / \  ")
+
+        if(a == 2 and b == 1 and c == 1): 
+            print("    __  |      |      ")
+            print("   |  | | \ /  | \ /  ")
+            print("   |  | |  X   |  X   ")
+            print("   |__| | / \  | / \  ")
+
+        if(a == 2 and b == 1 and c == 2): 
+            print("    __  |      |  __  ")
+            print("   |  | | \ /  | |  | ")
+            print("   |  | |  X   | |  | ")
+            print("   |__| | / \  | |__| ")
+
+        if(a == 2 and b == 2 and c == 1): 
+            print("    __  |  __  |      ")
+            print("   |  | | |  | | \ /  ")
+            print("   |  | | |  | |  X   ")
+            print("   |__| | |__| | / \  ")
+
     
     def display(self):
         self.display_row(self.board[0], self.board[1], self.board[2])
