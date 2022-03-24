@@ -164,12 +164,18 @@ class Tictactoe:
             print("   |  | | |  | |  X   ")
             print("   |__| | |__| | / \  ")
 
+    def display_key(self):
+        print("0 | 1 | 2 ")
+        print("3 | 4 | 5 ")
+        print("6 | 7 | 8 ")
+
     def display(self):                                                  #displays the current board
         self.display_row(self.board[0], self.board[1], self.board[2])
-        print("_______|______|_______")
+        print("________|______|_______")
         self.display_row(self.board[3], self.board[4], self.board[5])
-        print("_______|______|_______")
+        print("________|______|_______")
         self.display_row(self.board[6], self.board[7], self.board[8])
+
 
     def check_end_condition(self):                                                #set condition to 1 if player won, 2 if player lost, 3 if a tie, or else does nothing
         if(self.board[0] == 1 and self.board[1] == 1 and self.board[2] == 1):
