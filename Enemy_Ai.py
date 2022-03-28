@@ -1,13 +1,66 @@
 import random
 
 class Enemy:
-    available_positions = [0, 1, 2, 3, 4, 5, 6, 7, 8]   #A list of all available board positions
-
-    def update_available_positions(self, board):
-        for i in self.available_positions:              #iterates through board, updating the list of unused spaces
-            if(board[self.available_positions[i]] != 0):
-                del self.available_positions[i]
-
-
     def take_turn(self, board):
-        board[random.randint(0, self.available_positions.__len__)] = 2  #places a cirlce in a random unused spot
+        if(board[0] == 2 and board[1] == 0 and board[2] == 2):
+            board[1] = 2
+        elif(board[0] == 2 and board[1] == 2 and board[2] == 0):
+            board[2] = 2
+        elif(board[0] == 0 and board[1] == 2 and board[2] == 2):
+            board[0] = 2
+
+        elif(board[0] == 2 and board[4] == 0 and board[8] == 2):
+            board[4] = 2
+        elif(board[0] == 0 and board[4] == 2 and board[8] == 2):
+            board[0] = 2
+        elif(board[0] == 2 and board[4] == 2 and board[8] == 0):
+            board[8] = 2
+
+        elif(board[0] == 0 and board[3] == 2 and board[6] == 2):
+            board[0] = 2
+        elif(board[0] == 2 and board[3] == 0 and board[6] == 2):
+            board[3] = 2
+        elif(board[0] == 2 and board[3] == 2 and board[6] == 0):
+            board[6] = 2
+
+        elif(board[1] == 0 and board[4] == 2 and board[7] == 2):
+            board[1] = 2
+        elif(board[1] == 2 and board[4] == 0 and board[7] == 2):
+            board[4] = 2
+        elif(board[1] == 2 and board[4] == 2 and board[7] == 0):
+            board[7] = 2
+
+        elif(board[2] == 0 and board[5] == 2 and board[8] == 2):
+            board[2] = 2
+        elif(board[2] == 2 and board[5] == 0 and board[8] == 2):
+            board[6] = 2
+        elif(board[2] == 2 and board[5] == 2 and board[8] == 0):
+            board[8] = 2
+
+        elif(board[2] == 0 and board[4] == 2 and board[6] == 2):
+            board[2] = 2
+        elif(board[2] == 2 and board[4] == 0 and board[6] == 2):
+            board[4] = 2
+        elif(board[2] == 2 and board[4] == 2 and board[6] == 0):
+            board[6] = 2
+
+        elif(board[3] == 0 and board[4] == 2 and board[5] == 2):
+            board[3] = 2
+        elif(board[3] == 2 and board[4] == 0 and board[5] == 2):
+            board[4] = 2
+        elif(board[3] == 2 and board[4] == 2 and board[5] == 0):
+            board[5] = 2
+
+        elif(board[6] == 0 and board[7] == 2 and board[8] == 2):
+            board[6] = 2
+        elif(board[6] == 2 and board[7] == 0 and board[8] == 2):
+            board[7] = 2
+        elif(board[6] == 2 and board[7] == 2 and board[8] == 0):
+            board[8] = 2
+        else:
+            check = 0                                           #set a check flag to make sure an unused position is filled
+            while(check == 0):
+                position = random.randint(0, len(board)-1)      #get random number from 0-8 until the number is an available position
+                if(board[position] == 0):                       #places a circle in a random unused spot and sets check to 1 to leave loop
+                    board[position] = 2
+                    check           = 1

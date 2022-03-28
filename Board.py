@@ -1,6 +1,6 @@
 class Tictactoe:
     board       = [0] * 9       #create empty board containing 9 spaces
-    condition   = 0    
+    condition   = 0             #create variable to represent a win condition
     def display_row(self, a, b, c):
         if(a == 0 and b == 0 and c == 0):
             print("        |      |     ")
@@ -164,12 +164,14 @@ class Tictactoe:
             print("   |  | | |  | |  X   ")
             print("   |__| | |__| | / \  ")
 
-    def display_key(self):
-        print("0 | 1 | 2 ")
-        print("3 | 4 | 5 ")
-        print("6 | 7 | 8 ")
+    def display_key(self):                                                          #displays the key
+        print()
+        print("           KEY")
+        print("        0 | 1 | 2 ")
+        print("        3 | 4 | 5 ")
+        print("        6 | 7 | 8 ")
 
-    def display(self):                                                  #displays the current board
+    def display(self):                                                              #displays the current board
         self.display_row(self.board[0], self.board[1], self.board[2])
         print("________|______|_______")
         self.display_row(self.board[3], self.board[4], self.board[5])
